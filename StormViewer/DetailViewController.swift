@@ -9,10 +9,13 @@
 import Cocoa
 
 class DetailViewController: NSViewController {
-
+    @IBOutlet weak var imageView: NSImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
     
+    func configureWithImage(name: String) {
+        imageView.image = NSImage(named: name)
+    }
 }
